@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.idea/
+.superpowers/
+.tmp/
+.tmp-*
+_rollback/
+*.tgz
