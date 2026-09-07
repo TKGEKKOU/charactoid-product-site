@@ -97,10 +97,10 @@ function render() {
     <header class="site-header">
       <a class="brand" href="#top" aria-label="CHARACTOID 首页"><img class="brand-logo" src="/assets/brand/48.ico" alt="" /><span>CHARACTOID</span><small>开源角色 Agent 工作台</small></a>
       <nav class="desktop-nav" aria-label="主导航"><a href="#capabilities">项目定位</a><a href="#architecture">工作方式</a><a href="#workflow">真实案例</a><a href="#workers">能力单元</a><a href="#ecosystem">资源与扩展</a><a href="#boundaries">运行边界</a></nav>
-      <div class="header-actions"><a class="text-link" href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">查看GitHub ${icons.arrow}</a><a class="button button-primary button-small" href="https://github.com/TKGEKKOU/charactoid-product-site#readme" target="_blank" rel="noreferrer">开发者文档 ${icons.arrow}</a></div>
+      <div class="header-actions"><a class="text-link" href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button button-primary button-small" href="docs/guide/quickstart/" target="_blank" rel="noreferrer">开发者文档 ${icons.arrow}</a></div>
       <button class="mobile-menu" aria-label="打开菜单">${icons.menu}</button>
     </header>
-    <div class="mobile-drawer" aria-hidden="true"><button class="drawer-close" aria-label="关闭菜单">${icons.close}</button><a href="#capabilities">项目定位</a><a href="#architecture">工作方式</a><a href="#workflow">真实案例</a><a href="#workers">能力单元</a><a href="#ecosystem">资源与扩展</a><a href="#boundaries">运行边界</a><a href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">查看GitHub ${icons.arrow}</a><a href="https://github.com/TKGEKKOU/charactoid-product-site#readme" target="_blank" rel="noreferrer">开发者文档 ${icons.arrow}</a></div>
+    <div class="mobile-drawer" aria-hidden="true"><button class="drawer-close" aria-label="关闭菜单">${icons.close}</button><a href="#capabilities">项目定位</a><a href="#architecture">工作方式</a><a href="#workflow">真实案例</a><a href="#workers">能力单元</a><a href="#ecosystem">资源与扩展</a><a href="#boundaries">运行边界</a><a href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">GitHub ↗</a><a href="docs/guide/quickstart/" target="_blank" rel="noreferrer">开发者文档 ${icons.arrow}</a></div>
     <main>
       <section class="hero" id="top">
         <div class="hero-copy reveal"><h1><span class="hero-title-lead">建立你的角色</span><em class="hero-title-journey"><span class="hero-dimensions hero-typing" data-hero-phrases="把想法交给角色，让它自己找到合适的能力|不必记住工具名称，直接说你要完成什么|让每个角色拥有自己的知识、记忆与说话方式|把文档交给角色，建立可以随时检索的知识库|让角色用自己的声音说话，也能完成音色转换|让角色拥有形象、语音和持续互动的能力|让不同 Worker 各自处理擅长的工作|让角色调用工具，也接入外部服务与平台|让复杂的文件任务在对话中一步步完成|让每一次执行都有状态、结果和下一步|任务中断之后，仍然可以继续、取消或重试|在本地组织角色、资源与运行过程" aria-live="polite">把想法交给角色，让它自己找到合适的能力</span></em></h1><p class="hero-techline" aria-label="CHARACTOID 主要技术架构">由 Core Agent 理解请求，Supervisor 安排 Worker，Runtime 记录状态；知识由 RAG 管理，声音由 TTS、ASR、GPT-SoVITS 与 RVC 驱动，形象与外部能力通过 Live2D、MCP 接入。</p><div class="hero-install" id="hero-install">
@@ -121,7 +121,7 @@ function render() {
       <section class="boundaries section-pad" id="boundaries"><div class="runtime-top reveal"><div class="section-kicker"><span>06 / 运行边界</span><span>执行有状态，能力有边界</span></div><h2 class="display-title">执行有状态，<br /><em>能力也有边界。</em></h2></div><div class="runtime-grid"><div class="runtime-console reveal" id="runtime"><div class="console-header"><span>任务事件记录</span><span class="console-live"><i></i> LIVE</span></div><div class="console-body"><div class="console-event"><time>11:42:08</time><span class="event-dot teal"></span><div><strong>intent.received</strong><p>用户请求：用这段音频做一次变声</p></div></div><div class="console-event"><time>11:42:10</time><span class="event-dot blue"></span><div><strong>worker.dispatched</strong><p>delegate_to_config_worker</p></div></div><div class="console-event"><time>11:42:13</time><span class="event-dot green"></span><div><strong>checkpoint.created</strong><p>等待用户确认资源状态</p></div></div><div class="console-event faded"><time>— — —</time><span class="event-dot muted"></span><div><strong>next action</strong><p>resume / cancel / retry</p></div></div></div><div class="console-footer"><span>SESSION / YUME_00429</span><span>仅本机</span></div></div><div class="runtime-copy reveal reveal-delay"><div class="runtime-rule"></div><h3>每一种状态，都指向明确的下一步。</h3><p>未配置、未安装、未启动、检查中、运行中、等待输入、失败、取消和已完成，不会被混成一句模糊的“处理中”。</p><div class="state-list"><span><i class="dot-green"></i> 已完成</span><span><i class="dot-teal"></i> 等待输入</span><span><i class="dot-blue"></i> 运行中</span><span><i class="dot-dark"></i> 可取消</span></div></div></div><div class="boundary-rail reveal"><article><span class="boundary-index">01 / DATA</span><h3>数据边界</h3><p>SQLite 管理角色、会话、知识空间和运行摘要；Milvus Lite 管理文档分块与 Dense / Sparse Vector；文件系统只承载原始资料、附件、模型、音频与任务结果。</p></article><article><span class="boundary-index">02 / EXECUTION</span><h3>执行边界</h3><p>前端只提交结构化操作，不暴露本地路径、Shell、Python 或临时命令。Worker 通过稳定引用执行任务，资源管理只操作应用受管目录。</p></article><article><span class="boundary-index">03 / HUMAN LOOP</span><h3>人工确认</h3><p>未配置、未安装、未启动、检查中、运行中、等待输入、失败、取消、已完成；每个长任务都支持 Resume / Cancel / Retry。</p></article></div><div class="boundary-lifecycle reveal"><span>INTENT</span><i></i><span>CHECK</span><i></i><span>CONFIRM</span><i></i><span>RUN</span><i></i><span>RESULT</span><i></i><span>RESUME / CANCEL / RETRY</span></div></section>
       <section class="closing section-pad" id="closing"><div class="closing-inner reveal"><span class="closing-orbit orbit-a"></span><span class="closing-orbit orbit-b"></span><p class="eyebrow"><span class="eyebrow-dot"></span> 从一次真实请求开始</p><h2>开始建立角色，<br /><em>也建立它行动的方式。</em></h2><p>为不同角色配置知识、声音、形象与能力，再从一句真实请求开始。</p></div></section>
     </main>
-    <footer class="site-footer"><div class="footer-brand"><img class="footer-logo" src="/assets/brand/48.ico" alt="" /><div><strong>CHARACTOID</strong><span>开源角色 Agent 工作台</span></div></div><div class="footer-links"><a href="#capabilities">项目定位</a><a href="#architecture">工作方式</a><a href="#workflow">真实案例</a><a href="#workers">能力单元</a><a href="#ecosystem">资源与扩展</a><a href="#boundaries">运行边界</a><a href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">GitHub ${icons.arrow}</a></div><div class="footer-bottom"><span>Local-first. Role-driven. Resumable.</span><span>MIT LICENSE / 2026</span></div></footer>`;
+    <footer class="site-footer"><div class="footer-brand"><img class="footer-logo" src="/assets/brand/48.ico" alt="" /><div><strong>CHARACTOID</strong><span>开源角色 Agent 工作台</span></div></div><div class="footer-links"><a href="#capabilities">项目定位</a><a href="#architecture">工作方式</a><a href="#workflow">真实案例</a><a href="#workers">能力单元</a><a href="#ecosystem">资源与扩展</a><a href="#boundaries">运行边界</a><a href="https://github.com/TKGEKKOU/charactoid-product-site" target="_blank" rel="noreferrer">GitHub ↗</a></div><div class="footer-bottom"><span>Local-first. Role-driven. Resumable.</span><span>MIT LICENSE / 2026</span></div></footer>`;
   bindEvents();
 }
 
@@ -166,10 +166,18 @@ function bindInstallActions() {
       try {
         await navigator.clipboard.writeText(button.dataset.copy || '');
         button.dataset.copied = 'true';
+        button.innerHTML = icons.check;
+        button.setAttribute('aria-label', '已复制命令');
       } catch {
         button.dataset.copied = 'false';
+        button.innerHTML = icons.close;
+        button.setAttribute('aria-label', '复制失败，请重试');
       }
-      window.setTimeout(() => { delete button.dataset.copied; }, 1600);
+      window.setTimeout(() => {
+        delete button.dataset.copied;
+        button.innerHTML = icons.copy;
+        button.setAttribute('aria-label', '复制命令');
+      }, 1600);
     });
   });
 }
@@ -191,6 +199,21 @@ function bindInstallTabs() {
   syncCopyCommand(tabs.find((tab) => tab.classList.contains('is-active'))?.dataset.installTab || 'quick');
 }
 
+function bindHeaderScroll() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  let ticking = false;
+  const sync = () => {
+    header.classList.toggle('header-scrolled', window.scrollY > 56);
+    ticking = false;
+  };
+  const onScroll = () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(sync); }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  sync();
+}
+
 function bindEvents() {
   document.querySelectorAll('.worker-row').forEach((row) => {
     row.addEventListener('click', () => updateWorker(row.dataset.worker));
@@ -199,6 +222,7 @@ function bindEvents() {
   bindHeroTyping();
   bindInstallActions();
   bindInstallTabs();
+  bindHeaderScroll();
   document.querySelectorAll('.workflow-step').forEach((step) => step.addEventListener('click', () => updateWorkflowStep(Number(step.dataset.step))));
   document.querySelector('.mobile-menu')?.addEventListener('click', () => document.querySelector('.mobile-drawer')?.classList.add('open'));
   document.querySelector('.drawer-close')?.addEventListener('click', () => document.querySelector('.mobile-drawer')?.classList.remove('open'));
