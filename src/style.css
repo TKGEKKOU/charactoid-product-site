@@ -428,3 +428,22 @@ button{cursor:pointer}
   .hero,
   .hero::before { animation: none; }
 }
+/* Getting started: make the showcase directly actionable. */
+.getting-started{padding-top:86px;padding-bottom:92px;background:#eef6f4}
+.getting-started .section-kicker{border-color:#b8d7d2}
+.start-grid{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:64px;align-items:start;margin-top:54px}
+.start-copy p{max-width:400px;margin:28px 0 0;color:var(--muted);font-size:13px;line-height:1.9}
+.start-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.start-links .button{min-height:44px}
+.start-options{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:14px}
+.start-card{min-width:0;padding:22px;background:#fff;border:1px solid #c8dedb;box-shadow:0 16px 30px rgba(20,75,70,.06)}
+.start-card-primary{background:#39c5bb;border-color:#39c5bb;color:#073e3a}
+.start-card-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid rgba(8,69,65,.18)}
+.start-index{font-size:11px;font-weight:800;letter-spacing:.16em}.start-label{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+.start-card h3{margin:24px 0 10px;font-size:25px;letter-spacing:-.05em}.start-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.8}.start-card-primary p{color:#1b6661}
+.command-box{display:flex;gap:10px;align-items:stretch;margin-top:22px;padding:12px;background:rgba(255,255,255,.58);border:1px solid rgba(7,72,67,.18)}
+.command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:#073e3a;font:600 10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace}
+.copy-command{flex:none;align-self:center;padding:8px 10px;border:1px solid rgba(7,72,67,.35);background:#073e3a;color:#fff;font:700 10px/1.1 inherit;white-space:nowrap}
+.install-list{display:grid;gap:0;margin-top:25px;border-top:1px solid #d9e7e4}.install-list div{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid #d9e7e4;font-size:10px}.install-list strong{font-size:9px;letter-spacing:.12em;color:var(--teal-dark)}.install-list span{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink)}
+@media(max-width:980px){.start-grid{grid-template-columns:1fr;gap:38px}.start-copy p{max-width:620px}.start-options{max-width:760px}}
+@media(max-width:620px){.getting-started{padding-top:64px;padding-bottom:70px}.start-grid{margin-top:36px;gap:30px}.start-options{grid-template-columns:1fr}.start-card{padding:18px}.command-box{display:block}.copy-command{margin-top:12px}.start-links{flex-direction:column}.start-links .button{width:100%;justify-content:center}}
