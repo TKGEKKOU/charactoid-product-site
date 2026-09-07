@@ -106,8 +106,8 @@ function render() {
         <div class="hero-copy reveal"><h1><span class="hero-title-lead">建立你的角色</span><em class="hero-title-journey"><span class="hero-dimensions hero-typing" data-hero-phrases="把想法交给角色，让它自己找到合适的能力|不必记住工具名称，直接说你要完成什么|让每个角色拥有自己的知识、记忆与说话方式|把文档交给角色，建立可以随时检索的知识库|让角色用自己的声音说话，也能完成音色转换|让角色拥有形象、语音和持续互动的能力|让不同 Worker 各自处理擅长的工作|让角色调用工具，也接入外部服务与平台|让复杂的文件任务在对话中一步步完成|让每一次执行都有状态、结果和下一步|任务中断之后，仍然可以继续、取消或重试|在本地组织角色、资源与运行过程" aria-live="polite">把想法交给角色，让它自己找到合适的能力</span></em></h1><p class="hero-techline" aria-label="CHARACTOID 主要技术架构">由 Core Agent 理解请求，Supervisor 安排 Worker，Runtime 记录状态；知识由 RAG 管理，声音由 TTS、ASR、GPT-SoVITS 与 RVC 驱动，形象与外部能力通过 Live2D、MCP 接入。</p><div class="hero-install" id="hero-install">
           <div class="hero-install-tabs" role="tablist" aria-label="开始方式"><button class="is-active" type="button" role="tab" aria-selected="true" data-install-tab="quick">一键使用</button><button type="button" role="tab" aria-selected="false" data-install-tab="source">源码安装</button></div>
           <div class="hero-terminal">
-            <div class="terminal-bar"><span class="terminal-dots"><i></i><i></i><i></i></span><button class="copy-command terminal-copy" type="button" aria-label="复制命令" data-copy="npx github:TKGEKKOU/charactoid web">${icons.copy}</button></div>
-            <div class="hero-install-panel is-active" data-install-panel="quick"><div class="command-box"><span class="command-prompt">$</span><code>npx github:TKGEKKOU/charactoid web</code></div></div>
+            <div class="terminal-bar"><span class="terminal-dots"><i></i><i></i><i></i></span><button class="copy-command terminal-copy" type="button" aria-label="复制命令" data-copy="npx charactoid-cli web">${icons.copy}</button></div>
+            <div class="hero-install-panel is-active" data-install-panel="quick"><div class="command-box"><span class="command-prompt">$</span><code>npx charactoid-cli web</code></div></div>
             <div class="hero-install-panel" data-install-panel="source" hidden><div class="command-box"><span class="command-prompt">$</span><code>git clone https://github.com/TKGEKKOU/charactoid.git</code></div></div>
           </div>
         </div></div>
@@ -400,4 +400,5 @@ async function bindLive2D() {
     viewport.replaceChildren();
   }
 }
+
 
