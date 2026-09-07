@@ -430,12 +430,12 @@ button{cursor:pointer}
 }
 
 
-/* First-screen install panel: restrained acrylic command entry. */
-.hero-install{width:min(100%,600px);margin:25px auto 0;text-align:left;border:1px solid rgba(112,122,128,.34);border-radius:12px;background:#dfe3e5;box-shadow:0 14px 32px rgba(44,55,59,.12),inset 0 1px 0 rgba(255,255,255,.68);overflow:hidden}
-.hero-install-tabs{display:flex;align-items:stretch;background:#dfe3e5;border-bottom:1px solid rgba(99,110,116,.22)}
-.hero-install-tabs button{min-width:112px;padding:10px 18px;border:0;border-bottom:2px solid transparent;background:transparent;color:#69747a;font:700 11px/1 inherit;letter-spacing:.04em;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
-.hero-install-tabs button.is-active{border-bottom-color:#5c6a70;background:rgba(255,255,255,.26);color:#263238}
-.hero-terminal{min-height:116px;padding:0 17px 15px;background:#dfe3e5;color:#263238}
+/* First-screen install panel: thin silver acrylic command entry. */
+.hero-install{width:min(100%,600px);margin:25px auto 0;text-align:left;border:1px solid rgba(116,125,131,.42);border-radius:12px;background:rgba(220,224,227,.82);box-shadow:0 14px 32px rgba(32,42,47,.12),inset 0 1px 0 rgba(255,255,255,.82);backdrop-filter:blur(14px) saturate(105%);-webkit-backdrop-filter:blur(14px) saturate(105%);overflow:hidden}
+.hero-install-tabs{display:flex;align-items:stretch;width:max-content;background:transparent;border-bottom:1px solid rgba(99,110,116,.22)}
+.hero-install-tabs button{min-width:0;padding:10px 18px;border:0;border-bottom:2px solid transparent;background:transparent;color:#6a747a;font:700 11px/1 inherit;letter-spacing:.04em;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.hero-install-tabs button.is-active{border-bottom-color:#566269;background:rgba(255,255,255,.3);color:#273238}
+.hero-terminal{min-height:116px;padding:0 17px 15px;background:rgba(224,228,230,.62);color:#263238}
 .terminal-bar{display:flex;align-items:center;min-height:37px;border-bottom:1px solid rgba(99,110,116,.18);gap:10px}.terminal-dots{display:flex;gap:6px}.terminal-dots i{display:block;width:9px;height:9px;border-radius:50%;background:#ef6b63}.terminal-dots i:nth-child(2){background:#eab84e}.terminal-dots i:nth-child(3){background:#63bd63}.terminal-copy{margin-left:auto;border:0!important;background:transparent!important;color:#69747a!important;padding:6px 2px!important;cursor:pointer;display:grid;place-items:center}.terminal-copy svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.terminal-copy[data-copied="true"]{color:#3d8d88!important}
 .hero-install-panel{padding:18px 5px 7px}.hero-install-panel[hidden]{display:none}.hero-install-panel p{display:none}.hero-install .command-box{display:flex;gap:10px;align-items:flex-start;margin:0;padding:0;border:0;background:transparent}.hero-install .command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:#27343a;font:600 13px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace}.command-prompt{padding-top:1px;color:#64747a;font:700 14px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace}
-@media(max-width:620px){.hero-install{width:100%;margin-top:21px;border-radius:10px}.hero-install-tabs button{min-width:0;flex:1;padding:10px 8px;font-size:10px}.hero-terminal{padding:0 13px 12px}.hero-install-panel{padding:15px 3px 5px}.hero-install .command-box code{font-size:10px;line-height:1.7}.command-prompt{font-size:11px;line-height:1.7}}
+@media(max-width:620px){.hero-install{width:100%;margin-top:21px;border-radius:10px}.hero-install-tabs button{padding:10px 14px;font-size:10px}.hero-terminal{padding:0 13px 12px}.hero-install-panel{padding:15px 3px 5px}.hero-install .command-box code{font-size:10px;line-height:1.7}.command-prompt{font-size:11px;line-height:1.7}}
