@@ -428,22 +428,15 @@ button{cursor:pointer}
   .hero,
   .hero::before { animation: none; }
 }
-/* Getting started: make the showcase directly actionable. */
-.getting-started{padding-top:86px;padding-bottom:92px;background:#eef6f4}
-.getting-started .section-kicker{border-color:#b8d7d2}
-.start-grid{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:64px;align-items:start;margin-top:54px}
-.start-copy p{max-width:400px;margin:28px 0 0;color:var(--muted);font-size:13px;line-height:1.9}
-.start-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.start-links .button{min-height:44px}
-.start-options{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:14px}
-.start-card{min-width:0;padding:22px;background:#fff;border:1px solid #c8dedb;box-shadow:0 16px 30px rgba(20,75,70,.06)}
-.start-card-primary{background:#39c5bb;border-color:#39c5bb;color:#073e3a}
-.start-card-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid rgba(8,69,65,.18)}
-.start-index{font-size:11px;font-weight:800;letter-spacing:.16em}.start-label{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
-.start-card h3{margin:24px 0 10px;font-size:25px;letter-spacing:-.05em}.start-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.8}.start-card-primary p{color:#1b6661}
-.command-box{display:flex;gap:10px;align-items:stretch;margin-top:22px;padding:12px;background:rgba(255,255,255,.58);border:1px solid rgba(7,72,67,.18)}
-.command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:#073e3a;font:600 10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace}
-.copy-command{flex:none;align-self:center;padding:8px 10px;border:1px solid rgba(7,72,67,.35);background:#073e3a;color:#fff;font:700 10px/1.1 inherit;white-space:nowrap}
-.install-list{display:grid;gap:0;margin-top:25px;border-top:1px solid #d9e7e4}.install-list div{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid #d9e7e4;font-size:10px}.install-list strong{font-size:9px;letter-spacing:.12em;color:var(--teal-dark)}.install-list span{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink)}
-@media(max-width:980px){.start-grid{grid-template-columns:1fr;gap:38px}.start-copy p{max-width:620px}.start-options{max-width:760px}}
-@media(max-width:620px){.getting-started{padding-top:64px;padding-bottom:70px}.start-grid{margin-top:36px;gap:30px}.start-options{grid-template-columns:1fr}.start-card{padding:18px}.command-box{display:block}.copy-command{margin-top:12px}.start-links{flex-direction:column}.start-links .button{width:100%;justify-content:center}}
+
+/* First-screen install panel: the entry point stays inside the hero. */
+.hero-install{width:min(100%,640px);margin:28px auto 0;text-align:left;border:1px solid rgba(33,73,70,.2);background:rgba(255,255,255,.64);box-shadow:0 16px 32px rgba(26,75,70,.06)}
+.hero-install-tabs{display:flex;border-bottom:1px solid rgba(33,73,70,.16)}
+.hero-install-tabs button{flex:1;padding:11px 15px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font:700 10px/1 inherit;letter-spacing:.1em;cursor:pointer}
+.hero-install-tabs button.is-active{border-bottom-color:var(--teal);background:rgba(57,197,187,.1);color:var(--ink)}
+.hero-install-panel{padding:15px 16px 16px}.hero-install-panel[hidden]{display:none}.hero-install-panel p{margin:0 0 11px;color:var(--muted);font-size:11px;line-height:1.6}
+.hero-install .command-box{display:flex;gap:10px;align-items:stretch;margin:0;padding:10px;background:rgba(241,250,248,.85);border:1px solid rgba(33,73,70,.14)}
+.hero-install .command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:var(--ink);font:600 10px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace}
+.hero-install .copy-command{flex:none;align-self:center;padding:8px 10px;border:1px solid var(--teal-dark);background:var(--teal-dark);color:#fff;font:700 10px/1.1 inherit;white-space:nowrap;cursor:pointer}
+.source-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.source-steps span{padding:12px 10px;background:#f4f8f7;color:var(--muted);font-size:10px;line-height:1.5}.source-steps b{display:block;margin-bottom:5px;color:var(--teal-dark);font-size:9px;letter-spacing:.12em}
+@media(max-width:620px){.hero-install{margin-top:22px}.hero-install-panel{padding:13px}.hero-install .command-box{display:block}.hero-install .copy-command{margin-top:10px}.source-steps{grid-template-columns:1fr}}
