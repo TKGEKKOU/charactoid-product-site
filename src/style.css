@@ -429,14 +429,13 @@ button{cursor:pointer}
   .hero::before { animation: none; }
 }
 
-/* First-screen install panel: the entry point stays inside the hero. */
-.hero-install{width:min(100%,640px);margin:28px auto 0;text-align:left;border:1px solid rgba(33,73,70,.2);background:rgba(255,255,255,.64);box-shadow:0 16px 32px rgba(26,75,70,.06)}
-.hero-install-tabs{display:flex;border-bottom:1px solid rgba(33,73,70,.16)}
-.hero-install-tabs button{flex:1;padding:11px 15px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font:700 10px/1 inherit;letter-spacing:.1em;cursor:pointer}
-.hero-install-tabs button.is-active{border-bottom-color:var(--teal);background:rgba(57,197,187,.1);color:var(--ink)}
-.hero-install-panel{padding:15px 16px 16px}.hero-install-panel[hidden]{display:none}.hero-install-panel p{margin:0 0 11px;color:var(--muted);font-size:11px;line-height:1.6}
-.hero-install .command-box{display:flex;gap:10px;align-items:stretch;margin:0;padding:10px;background:rgba(241,250,248,.85);border:1px solid rgba(33,73,70,.14)}
-.hero-install .command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:var(--ink);font:600 10px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace}
-.hero-install .copy-command{flex:none;align-self:center;padding:8px 10px;border:1px solid var(--teal-dark);background:var(--teal-dark);color:#fff;font:700 10px/1.1 inherit;white-space:nowrap;cursor:pointer}
-.source-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.source-steps span{padding:12px 10px;background:#f4f8f7;color:var(--muted);font-size:10px;line-height:1.5}.source-steps b{display:block;margin-bottom:5px;color:var(--teal-dark);font-size:9px;letter-spacing:.12em}
-@media(max-width:620px){.hero-install{margin-top:22px}.hero-install-panel{padding:13px}.hero-install .command-box{display:block}.hero-install .copy-command{margin-top:10px}.source-steps{grid-template-columns:1fr}}
+
+/* DeepSeek-inspired first-screen entry: tabbed command terminal, adapted to CHARACTOID. */
+.hero-install{width:min(100%,720px);margin:34px auto 0;text-align:left;border:1px solid rgba(57,197,187,.45);border-radius:14px;background:rgba(8,24,36,.92);box-shadow:0 18px 48px rgba(13,57,65,.17),0 0 0 5px rgba(57,197,187,.035);overflow:hidden}
+.hero-install-tabs{display:flex;align-items:stretch;background:rgba(10,30,45,.92);border-bottom:1px solid rgba(122,190,196,.2)}
+.hero-install-tabs button{min-width:132px;padding:14px 22px;border:0;border-bottom:2px solid transparent;background:transparent;color:rgba(220,235,242,.56);font:700 12px/1 inherit;letter-spacing:.06em;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.hero-install-tabs button.is-active{border-bottom-color:#39c5bb;background:rgba(57,197,187,.1);color:#f4fbfa}
+.hero-terminal{min-height:168px;padding:0 20px 22px;background:radial-gradient(circle at 78% 60%,rgba(57,197,187,.12),transparent 36%),linear-gradient(120deg,#101b2b,#0a1220 70%);color:#edf8f6}
+.terminal-bar{display:flex;align-items:center;min-height:46px;border-bottom:1px solid rgba(220,235,242,.1);gap:12px}.terminal-dots{display:flex;gap:7px}.terminal-dots i{display:block;width:10px;height:10px;border-radius:50%;background:#f15f57}.terminal-dots i:nth-child(2){background:#f5bd4f}.terminal-dots i:nth-child(3){background:#44c95b}.terminal-caption{color:rgba(220,235,242,.42);font-size:9px;font-weight:800;letter-spacing:.14em}.terminal-copy{margin-left:auto;border:0!important;background:transparent!important;color:rgba(220,235,242,.68)!important;padding:7px 4px!important;font-size:11px!important;cursor:pointer}
+.hero-install-panel{padding:22px 8px 0}.hero-install-panel[hidden]{display:none}.hero-install-panel p{margin:0 0 13px;color:rgba(220,235,242,.65);font-size:11px;line-height:1.6}.hero-install .command-box{display:flex;gap:12px;align-items:flex-start;margin:0;padding:0;border:0;background:transparent}.hero-install .command-box code{min-width:0;flex:1;overflow-wrap:anywhere;color:#f2f9f8;font:600 14px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace}.command-prompt{padding-top:1px;color:#39c5bb;font:700 15px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace}.source-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.source-steps span{padding:12px 10px;background:rgba(255,255,255,.06);color:rgba(220,235,242,.8);font-size:10px;line-height:1.5}.source-steps b{display:block;margin-bottom:5px;color:#39c5bb;font-size:9px;letter-spacing:.12em}
+@media(max-width:620px){.hero-install{margin-top:24px;border-radius:11px}.hero-install-tabs button{min-width:0;flex:1;padding:12px 10px;font-size:11px}.hero-terminal{padding:0 14px 18px}.hero-install-panel{padding:17px 4px 0}.hero-install .command-box code{font-size:11px;line-height:1.75}.command-prompt{font-size:12px;line-height:1.75}.source-steps{grid-template-columns:1fr}}
